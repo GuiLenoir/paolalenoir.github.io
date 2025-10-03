@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/*HERO SECTION*/
+.hero-section {
+  height: 90vh;
+  background-image: url('../assets/imgs/-_8 - Foto.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+}
+
+.hero-section .btn {
+  /* Define uma transição suave para a propriedade 'transform' */
+  transition: transform 0.2s ease-in-out;
+}
+
+.hero-section .btn:hover {
+  /* Aumenta a escala do botão em 5% ao passar o mouse */
+  transform: scale(1.15);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+
+/* ... estilos existentes para .hero-section e .btn ... */
+
+/* --- Estilos para o Título Principal com Efeito Typewriter --- */
+#TituloHero {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 5rem; /* Tamanho da fonte para o efeito */
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  
+  /* Propriedades para o efeito de máquina de escrever */
+  display: inline-block; /* Necessário para que a largura se ajuste ao conteúdo */
+  margin: 0 auto;
+  white-space: nowrap; /* Mantém o texto em uma única linha */
+  overflow: hidden; /* Esconde o texto que ainda não foi "digitado" */
+  
+
+ 
+}
+
+
+#SubTituloHero {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 3rem; /* Tamanho da fonte para o efeito */
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  
+  /* Propriedades para o efeito de máquina de escrever */
+  display: inline-block; /* Necessário para que a largura se ajuste ao conteúdo */
+  margin: 0 auto;
+  border-right: 3px solid rgba(255, 255, 255, .75); /* O cursor piscando */
+  white-space: nowrap; /* Mantém o texto em uma única linha */
+  overflow: hidden; /* Esconde o texto que ainda não foi "digitado" */
+  
+  /* Aplica as duas animações */
+  animation: 
+    typewriter 1s steps(30) 350ms 1 normal both, 
+    blinkingCursor 600ms steps(35) 1s 1 normal both;
+}
+
+
+
+/* --- Animações para o Efeito Typewriter --- */
+
+/* Animação que "digita" o texto, expandindo a largura */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Animação que faz o cursor piscar */
+@keyframes blinkingCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, .75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@media (max-width: 992px) {
+  #TituloHero {
+    font-size: 4rem; /* Reduz o título */
+  }
+  #SubTituloHero {
+    font-size: 2.2rem; /* Reduz o subtítulo */
+  }
+}
+
+/* Para celulares */
+@media (max-width: 768px) {
+  #TituloHero {
+    font-size: 3rem; /* Reduz ainda mais */
+  }
+  #SubTituloHero {
+    font-size: 1.5rem; /* Reduz ainda mais */
+    /* Ajusta os passos da animação para o novo tamanho */
+    animation: 
+      typewriter 1s steps(25) 350ms 1 normal both, 
+      blinkingCursor 600ms steps(25) 1s 1 normal both;
+  }
+}
+
+/* Para celulares muito pequenos */
+@media (max-width: 576px) {
+  #TituloHero {
+    font-size: 2.5rem;
+  }
+  #SubTituloHero {
+    font-size: 1.2rem;
+  }
+}
+
+.hero-section {
+  position: relative; /* Essencial para posicionar os filhos */
+  height: 90vh;
+  overflow: hidden; /* Esconde partes da imagem que possam vazar */
+  background-color: black;
+}
+
+/* Estilo para os divs de fundo do carrossel */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* A mágica do fade acontece aqui */
+  transition: opacity 1.5s ease-in-out;
+}
+
+/* Container para o conteúdo que fica sobre o fundo */
+.hero-content {
+  position: relative; /* Garante que o conteúdo fique sobre os fundos */
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}

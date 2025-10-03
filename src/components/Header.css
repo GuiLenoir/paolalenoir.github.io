@@ -1,0 +1,35 @@
+#orcamentobotao {
+  transition: transform 0.2s ease-in-out;
+}
+#orcamentobotao:hover {
+  transform: scale(1.05);
+}
+
+.nav-link-custom-botao{
+   
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #212529; /* Cor da borda escura */
+  color: #000000; /* Texto claro */
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.nav-link-custom-botao:hover{
+   background-color: #000000; /* Fundo claro */
+  color: #ffffff; /* Texto escuro */
+  text-decoration: none;
+}
+
+
+.logopaola {
+  height: 45px; /* Ajuste a altura conforme necessário */
+  width: auto; /* Mantém a proporção da imagem */
+    filter: contrast(1.5);
+  transition: transform 0.2s ease-in-out;
+}
+
+.logopaola:hover {
+    filter: contrast(10);
+    transform: scale(1.05);
+}
